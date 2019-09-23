@@ -1,0 +1,21 @@
+{
+  "name": "csgo_tracker_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Stat tracker for CSGO",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Young",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
