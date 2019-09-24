@@ -1,5 +1,14 @@
 <template>
-  <div>Profile</div>
+  <section>
+    <div v-if="loading">
+      <h3>Loading Stats</h3>
+    </div>
+    <div v-if="error">
+      <h1>{{error}}</h1>
+      <router-link to="/">Back To Search</router-link>
+    </div>
+    <div v-if="profileData" class="container">{{profileData.platformInfo.platformUserHandle}}</div>
+  </section>
 </template>
 
 <script>
