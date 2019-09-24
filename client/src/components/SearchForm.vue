@@ -7,6 +7,7 @@
         <input
           type="text"
           name="text"
+          v-model="steamid"
           id="steamid"
           placeholder="Enter your Steam ID or your 16 digit steam number thing"
         />
@@ -20,7 +21,7 @@
 
 <script>
 export default {
-  name: "Search",
+  name: "SearchForm",
   data() {
     return {
       steamid: ""
@@ -29,9 +30,12 @@ export default {
   methods: {
     onSubmit() {
       if (!this.steamid) {
-        console.log("Enter a valid Steam ID");
+        this.$toasted.show("Please enter a valid Steam ID", {
+          duration: 2000,
+          icon: "exclamation-circle"
+        });
       } else {
-        console.log("asdfads");
+        this.$router.push(`/profile/${this.steamid}`);
       }
     }
   }

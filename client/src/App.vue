@@ -14,7 +14,7 @@ export default {
 <style>
 @font-face {
   font-family: "csgo_font";
-  src: URL("../public/cs_regular.ttf") format("truetype");
+  src: URL("fonts/cs_regular.ttf") format("truetype");
 }
 
 * {
