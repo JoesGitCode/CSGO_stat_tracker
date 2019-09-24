@@ -1,16 +1,13 @@
 <template>
   <div class="container">
-    <SearchForm />
+    <router-view />
   </div>
 </template>
 
 <script>
-import SearchForm from "./components/SearchForm";
 export default {
   name: "app",
-  components: {
-    SearchForm
-  }
+  components: {}
 };
 </script>
 
