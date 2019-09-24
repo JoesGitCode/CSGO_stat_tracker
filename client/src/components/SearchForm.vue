@@ -1,7 +1,7 @@
 <template>
   <section class="search">
     <h1>Track Your Stats</h1>
-    <form>
+    <form v-on:submit.prevent="onSubmit">
       <div class="form-group">
         <label for="steamid">Steam ID</label>
         <input
@@ -25,6 +25,15 @@ export default {
     return {
       steamid: ""
     };
+  },
+  methods: {
+    onSubmit() {
+      if (!this.steamid) {
+        console.log("Enter a valid Steam ID");
+      } else {
+        console.log("asdfads");
+      }
+    }
   }
 };
 </script>
