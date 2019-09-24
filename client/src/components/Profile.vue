@@ -14,30 +14,42 @@
       </h1>
 
       <div class="grid">
-        <div></div>
-        <div>
-          <ul>
-            <li>
-              <h4>Time Played</h4>
-              <p>{{profileData.segments[0].stats.timePlayed.displayValue}}</p>
-            </li>
-            <li>
-              <h4>Total Kills</h4>
-              <p>{{profileData.segments[0].stats.kills.displayValue}}</p>
-            </li>
-            <li>
-              <h4>Total Deaths</h4>
-              <p>{{profileData.segments[0].stats.deaths.displayValue}}</p>
-            </li>
-            <li>
-              <h4>KDR</h4>
-              <!-- <p>
-                { {const kills = profileData.segments[0].stats.kills.displayValue} /
-                {const deaths = profileData.segments[0].stats.deaths.displayValue}}
-              </p>-->
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <li>
+            <h4>Time Played</h4>
+            <p>{{profileData.segments[0].stats.timePlayed.displayValue}}</p>
+          </li>
+          <li>
+            <h4>Total Kills</h4>
+            <p>{{profileData.segments[0].stats.kills.displayValue}}</p>
+          </li>
+          <li>
+            <h4>Total Deaths</h4>
+            <p>{{profileData.segments[0].stats.deaths.displayValue}}</p>
+          </li>
+          <li>
+            <h4>KDR</h4>
+            <p>{{profileData.segments[0].stats.kd.displayValue}}</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h4>Accuracy</h4>
+            <p>{{profileData.segments[0].stats.shotsAccuracy.displayValue}}</p>
+          </li>
+          <li>
+            <h4>HeadShot Percentage</h4>
+            <p>{{profileData.segments[0].stats.headshotPct.displayValue}}</p>
+          </li>
+          <li>
+            <h4>Win Percentage</h4>
+            <p>{{profileData.segments[0].stats.wlPercentage.displayValue}}</p>
+          </li>
+          <li>
+            <h4>Total Damage</h4>
+            <p>{{profileData.segments[0].stats.damage.displayValue}}</p>
+          </li>
+        </ul>
       </div>
 
       <router-link to="/">Back To Seach</router-link>
@@ -64,9 +76,6 @@ export default {
         `/api/v2/profile/steam/${this.$route.params.steamid}`
       );
       this.profileData = response.data.data;
-      // eslint-disable-next-line
-      console.log(this.profileData);
-
       this.loading = false;
     } catch (err) {
       this.loading = false;
@@ -108,6 +117,7 @@ a:hover {
 .steamPicture {
   width: 40px;
   margin-right: 0.7rem;
+  margin-left: 0.7rem;
 }
 img {
   width: 100%;
@@ -115,6 +125,7 @@ img {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
   grid-gap: 1rem;
 }
 li {

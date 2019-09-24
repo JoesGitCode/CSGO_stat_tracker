@@ -10,7 +10,7 @@ export default {
   name: "MainLogo",
   data() {
     return {
-      image: require("@/assets/csgo_logo.png")
+      image: require("@/assets/csgo_logo_white.png")
     };
   }
 };
@@ -19,13 +19,15 @@ export default {
 <style scoped>
 img {
   width: 300px;
+  height: 100px;
 }
 
 h1 {
-  color: #211f20;
+  color: #fff;
   margin-top: -20px;
   width: 300px;
-  font-size: 2.5rem;
+
+  font-size: 2rem;
 }
 
 @media (max-width: 700px) {

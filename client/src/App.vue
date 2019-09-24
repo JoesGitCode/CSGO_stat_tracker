@@ -2,6 +2,7 @@
   <div class="container">
     <MainLogo />
     <router-view />
+    <footer>&copy; Joseph Young 2019</footer>
   </div>
 </template>
 
@@ -32,7 +33,9 @@ export default {
 }
 
 body {
-  background: var(--primary-color);
+  background: url("./assets/csgo_background.png") no-repeat center center/cover;
+  height: 100vh;
+  width: 100vw;
   font-family: "csgo_font";
   color: #fff;
   line-height: 1.6;
@@ -86,6 +89,12 @@ textarea {
   cursor: pointer;
   outline: none;
   margin-top: 1rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
 }
 @media (max-width: 700px) {
   body {
