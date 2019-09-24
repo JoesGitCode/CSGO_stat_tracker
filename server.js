@@ -5,6 +5,7 @@ const fetch = require("node-fetch");
 dotenv.config({ path: "./config.env" });
 
 const app = express();
+const port = process.env.PORT;
 
 app.get("/api/v2/profile/steam/:steamid", async (req, res) => {
   const headers = { "TRN-Api-Key": process.env.API_KEY };
@@ -31,8 +32,6 @@ app.get("/api/v2/profile/steam/:steamid", async (req, res) => {
     res.status(500);
   }
 });
-
-const port = process.env.PORT;
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
