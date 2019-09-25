@@ -33,8 +33,12 @@ app.get("/api/v2/profile/steam/:steamid", async (req, res) => {
   }
 });
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(__dirname + "/public/"));
+
+  app.get(/.*/, (req, res) => res.sendFile(__dirname + "/public/index.html"));
+}
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-
-//http://localhost:5000/api/v2/profile/steam/76561198008049283
