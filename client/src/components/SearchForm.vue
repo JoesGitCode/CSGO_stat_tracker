@@ -13,7 +13,7 @@
         />
       </div>
       <div class="form-group">
-        <input type="submit" value="submit" class="btn" />
+        <input type="submit" value="Submit" class="btn" />
       </div>
     </form>
   </section>
@@ -35,7 +35,7 @@ export default {
           icon: "exclamation-circle"
         });
       } else {
-        this.$router.push(`/profile/steam/${this.steamid}`);
+        this.$router.push(`/profile/${this.steamid}`);
       }
     }
   }

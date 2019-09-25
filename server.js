@@ -1,10 +1,15 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const morgan = require("morgan");
 
 dotenv.config({ path: "./config.env" });
 
 const app = express();
 const port = process.env.PORT || 8000;
+
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
 
 app.use("/api/v2/profile", require("./routes/profile"));
 

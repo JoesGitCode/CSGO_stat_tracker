@@ -2,7 +2,7 @@
   "name": "csgo_tracker_v2",
   "version": "1.0.0",
   "description": "Stat tracker for CSGO",
-  "main": "",
+  "main": "server.js",
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
