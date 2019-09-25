@@ -8,11 +8,11 @@ const port = process.env.PORT || 8000;
 
 app.use("/api/v2/profile", require("./routes/profile"));
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(__dirname + "/public/"));
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(__dirname + "/public/"));
 
-  app.get(/.*/, (req, res) => res.sendFile(__dirname + "/public/index.html"));
-}
+//   app.get(/.*/, (req, res) => res.sendFile(__dirname + "/public/index.html"));
+// }
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
