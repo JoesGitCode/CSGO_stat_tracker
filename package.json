@@ -4,10 +4,10 @@
   "description": "",
   "main": "Stat tracker for CSGO",
   "scripts": {
-    "startnode": "node server",
+    "start": "node server",
     "server": "nodemon server",
     "client": "npm run serve --prefix client",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Joseph Young",
   "license": "MIT",
