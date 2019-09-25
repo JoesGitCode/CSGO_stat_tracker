@@ -9,7 +9,7 @@
           name="text"
           v-model="steamid"
           id="steamid"
-          placeholder="Enter your Steam ID or your 16 digit steam number thing"
+          placeholder="Enter your Steam Name or your 17 digit steam ID"
         />
       </div>
       <div class="form-group">

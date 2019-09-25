@@ -29,7 +29,9 @@ app.get("/api/v2/profile/steam/:steamid", async (req, res) => {
     res.json(data);
   } catch (error) {
     console.error(error, "Server error");
-    res.status(500);
+    res.status(500).json({
+      message: "Server Error"
+    });
   }
 });
 
