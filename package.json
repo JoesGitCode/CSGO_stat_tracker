@@ -1,13 +1,13 @@
 {
   "name": "csgo_tracker_v2",
   "version": "1.0.0",
-  "description": "",
-  "main": "Stat tracker for CSGO",
+  "description": "Stat tracker for CSGO",
+  "main": "",
   "scripts": {
-    "startserver": "node server",
+    "start": "node server",
     "server": "nodemon server",
     "client": "npm run serve --prefix client",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Joseph Young",
   "license": "MIT",

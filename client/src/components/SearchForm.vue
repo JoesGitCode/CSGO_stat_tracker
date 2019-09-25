@@ -35,7 +35,7 @@ export default {
           icon: "exclamation-circle"
         });
       } else {
-        this.$router.push(`/profile/${this.steamid}`);
+        this.$router.push(`/profile/steam/${this.steamid}`);
       }
     }
   }
