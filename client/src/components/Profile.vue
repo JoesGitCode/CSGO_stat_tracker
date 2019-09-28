@@ -21,41 +21,41 @@
 
       <div class="grid">
         <ul>
-          <li>
+          <!-- <li>
             <h4>Time Played</h4>
-            <p>{{profileData.segments[0].stats.timePlayed.displayValue}}</p>
-          </li>
+            <p>{{profileData.segments[1].stats.timePlayed.displayValue}}</p>
+          </li>-->
           <li>
             <h4>Total Kills</h4>
-            <p>{{profileData.segments[0].stats.kills.displayValue}}</p>
+            <p>{{profileData.segments[1].stats.kills.displayValue}}</p>
           </li>
-          <li>
+          <!-- <li>
             <h4>Total Deaths</h4>
-            <p>{{profileData.segments[0].stats.deaths.displayValue}}</p>
-          </li>
-          <li>
+            <p>{{profileData.segments[1].stats.deaths.displayValue}}</p>
+          </li>-->
+          <!-- <li>
             <h4>KDR</h4>
-            <p>{{profileData.segments[0].stats.kd.displayValue}}</p>
-          </li>
+            <p>{{profileData.segments[1].stats.kd.displayValue}}</p>
+          </li>-->
         </ul>
-        <ul>
+        <!-- <ul>
           <li>
             <h4>Accuracy</h4>
-            <p>{{profileData.segments[0].stats.shotsAccuracy.displayValue}}</p>
+            <p>{{profileData.segments[1].stats.shotsAccuracy.displayValue}}</p>
           </li>
           <li>
             <h4>HeadShot Percentage</h4>
-            <p>{{profileData.segments[0].stats.headshotPct.displayValue}}</p>
+            <p>{{profileData.segments[1].stats.headshotPct.displayValue}}</p>
           </li>
           <li>
             <h4>Win Percentage</h4>
-            <p>{{profileData.segments[0].stats.wlPercentage.displayValue}}</p>
+            <p>{{profileData.segments[1].stats.wlPercentage.displayValue}}</p>
           </li>
           <li>
             <h4>Total Damage</h4>
-            <p>{{profileData.segments[0].stats.damage.displayValue}}</p>
+            <p>{{profileData.segments[1].stats.damage.displayValue}}</p>
           </li>
-        </ul>
+        </ul>-->
       </div>
 
       <router-link to="/">Back To Seach</router-link>
@@ -79,7 +79,7 @@ export default {
     this.loading = true;
     try {
       const response = await axios.get(
-        `/api/v2/profile/steam/${this.$route.params.steamid}`
+        `/api/v2/profile/psn/${this.$route.params.steamid}`
       );
       this.profileData = response.data.data;
       this.loading = false;
