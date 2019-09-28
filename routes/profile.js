@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const fetch = require("node-fetch");
 
-router.get("/steam/:steamid", async (req, res) => {
+router.get("/psn/:steamid", async (req, res) => {
   try {
     const headers = {
       "TRN-Api-Key": process.env.TRACKER_API_KEY
@@ -11,7 +11,7 @@ router.get("/steam/:steamid", async (req, res) => {
     const { steamid } = req.params;
 
     const response = await fetch(
-      `${process.env.TRACKER_API_URL}/profile/steam/${steamid}`,
+      `${process.env.TRACKER_API_URL}/profile/psn/${steamid}`,
       {
         headers
       }
