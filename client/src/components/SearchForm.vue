@@ -3,7 +3,9 @@
     <h1>Track Your Stats</h1>
     <form v-on:submit.prevent="onSubmit">
       <div class="form-group">
-        <label for="steamid">Steam ID</label>
+        <label
+          for="steamid"
+        >Steam ID &#160; &#160; &#40; e.g. 76561198004854956 for Dupreeh from team Astralis &#41;</label>
         <input
           type="text"
           name="text"

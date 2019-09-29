@@ -81,6 +81,11 @@ textarea {
   font-size: 1.2rem;
   border: 1px solid #ccc;
 }
+
+#steamid:focus {
+  outline-color: var(--primary-color);
+}
+
 .btn {
   display: inline-block;
   background: var(--primary-color);
