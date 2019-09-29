@@ -34,6 +34,7 @@ export default {
 
 body {
   background: url("./assets/csgo_background.png") no-repeat center center/cover;
+  background-repeat: repeat-y;
   height: 100vh;
   width: 100vw;
   font-family: "csgo_font";
