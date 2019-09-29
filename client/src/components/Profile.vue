@@ -20,42 +20,38 @@
       </h1>
 
       <div class="grid">
-        <ul>
-          <li>
-            <h4>Time Played</h4>
-            <p>{{profileData.segments[0].stats.timePlayed.displayValue}}</p>
-          </li>
-          <li>
-            <h4>Total Kills</h4>
-            <p>{{profileData.segments[0].stats.kills.displayValue}}</p>
-          </li>
-          <li>
-            <h4>Total Deaths</h4>
-            <p>{{profileData.segments[0].stats.deaths.displayValue}}</p>
-          </li>
-          <li>
-            <h4>KDR</h4>
-            <p>{{profileData.segments[0].stats.kd.displayValue}}</p>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <h4>Accuracy</h4>
-            <p>{{profileData.segments[0].stats.shotsAccuracy.displayValue}}</p>
-          </li>
-          <li>
-            <h4>HeadShot Percentage</h4>
-            <p>{{profileData.segments[0].stats.headshotPct.displayValue}}</p>
-          </li>
-          <li>
-            <h4>Win Percentage</h4>
-            <p>{{profileData.segments[0].stats.wlPercentage.displayValue}}</p>
-          </li>
-          <li>
-            <h4>Total Damage</h4>
-            <p>{{profileData.segments[0].stats.damage.displayValue}}</p>
-          </li>
-        </ul>
+        <div class="grid-stat">
+          <h4>Time Played</h4>
+          <p>{{profileData.segments[0].stats.timePlayed.displayValue}}</p>
+        </div>
+        <div class="grid-stat">
+          <h4>Total Kills</h4>
+          <p>{{profileData.segments[0].stats.kills.displayValue}}</p>
+        </div>
+        <div class="grid-stat">
+          <h4>Total Deaths</h4>
+          <p>{{profileData.segments[0].stats.deaths.displayValue}}</p>
+        </div>
+        <div class="grid-stat">
+          <h4>KDR</h4>
+          <p>{{profileData.segments[0].stats.kd.displayValue}}</p>
+        </div>
+        <div class="grid-stat">
+          <h4>Accuracy</h4>
+          <p>{{profileData.segments[0].stats.shotsAccuracy.displayValue}}</p>
+        </div>
+        <div class="grid-stat">
+          <h4>HeadShot Percentage</h4>
+          <p>{{profileData.segments[0].stats.headshotPct.displayValue}}</p>
+        </div>
+        <div class="grid-stat">
+          <h4>Win Percentage</h4>
+          <p>{{profileData.segments[0].stats.wlPercentage.displayValue}}</p>
+        </div>
+        <div class="grid-stat">
+          <h4>Total Damage</h4>
+          <p>{{profileData.segments[0].stats.damage.displayValue}}</p>
+        </div>
       </div>
 
       <router-link to="/">Back To Seach</router-link>
@@ -117,8 +113,8 @@ a {
   padding: 0.5rem 0.8rem;
 }
 a:hover {
-  border: #ccc 2px solid;
-  color: #ccc;
+  border: #a5884d 2px solid;
+  color: #a5884d;
 }
 .steamPicture {
   width: 40px;
@@ -131,22 +127,23 @@ img {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-flow: column;
+  /* grid-auto-flow: column; */
   grid-gap: 1rem;
 }
-li {
+.grid-stat {
   background: rgba(0, 0, 0, 0.6);
   padding: 1rem;
   margin-bottom: 0.7rem;
   border-radius: 10px;
 }
-li p {
+.grid-stat p {
   font-size: 2rem;
+  color: var(--primary-color);
 }
-li:first-child p {
+.grid-stat:first-child p {
   font-size: 1.5rem;
 }
-li span {
+.grid-stat span {
   font-size: 1rem;
   color: #ccc;
 }
@@ -161,7 +158,11 @@ li span {
   .grid {
     grid-template-columns: 1fr;
   }
-  li p {
+
+  .grid-stat {
+    text-align: center;
+  }
+  .grid-stat p {
     font-size: 1.5rem;
   }
 }
