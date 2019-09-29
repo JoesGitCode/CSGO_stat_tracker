@@ -16,7 +16,7 @@ h1[data-v-f82ce1f2] {
 }
 @font-face {
   font-family: "csgo_font";
-  src: url("../public/fonts/cs_regular.ttf") format("truetype");
+  src: url("../fonts/cs_regular.ttf") format("truetype");
 }
 :root {
   --primary-color: #953036;
