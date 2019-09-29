@@ -23,7 +23,7 @@ export default {
 }
 
 :root {
-  --primary-color: #953036;
+  --primary-color: #be9033;
 }
 
 * {
@@ -89,6 +89,15 @@ textarea {
   cursor: pointer;
   outline: none;
   margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #a5884d;
+}
+
+.btn:active {
+  background: #fff;
+  color: var(--primary-color);
 }
 
 footer {

@@ -18,15 +18,17 @@ export default {
 
 <style scoped>
 img {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 100px;
+  margin-left: -8px;
 }
 
 h1 {
-  color: #fff;
+  color: var(--primary-color);
   margin-top: -20px;
-  width: 300px;
-
+  width: 100%;
+  max-width: 300px;
   font-size: 2rem;
 }
 
@@ -34,6 +36,12 @@ h1 {
   img {
     display: block;
     margin: auto;
+  }
+
+  h1 {
+    display: block;
+    margin: auto;
+    text-align: center;
   }
 }
 </style>
