@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-app.use("/api/v2/profile", require("./routes/profile"));
+app.use("/api/v1/profile", require("./routes/profile"));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(__dirname + "/public/"));
