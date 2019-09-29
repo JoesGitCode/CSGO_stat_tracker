@@ -157,9 +157,7 @@ li span {
     display: block;
     text-align: center;
   }
-  .steamPicture {
-    display: none;
-  }
+
   .grid {
     grid-template-columns: 1fr;
   }

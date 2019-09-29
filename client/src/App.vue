@@ -96,9 +96,4 @@ footer {
   bottom: 0;
   text-align: center;
 }
-@media (max-width: 700px) {
-  body {
-    background: var(--primary-color);
-  }
-}
 </style>
