@@ -50,28 +50,25 @@ a {
 ul {
   list-style: none;
 }
-.body-bg-no-image {
-  background: var(--primary-color);
-}
-.body-bg-image {
-  background: var(--primary-color) url("./assets/csgo_logo.png") no-repeat top
-    center;
-}
+
 .container {
   max-width: 960px;
   margin: 1rem auto;
   overflow: auto;
   padding: 0 2rem;
 }
+
 .form-group {
   margin: 1rem 0;
 }
+
 .search {
   background: rgba(0, 0, 0, 0.5);
   border: 4px #fff solid;
   margin-top: 1rem;
   padding: 2rem;
 }
+
 input,
 select,
 textarea {
